@@ -387,11 +387,25 @@
                 <a href="#home" class="text-gray-900 dark:text-gray-100 text-2xl font-bold ml-4 transition-colors duration-300">{{ __('messages.name') }}</a>
             </div>
             <div class="hidden md:flex items-center space-x-6">
-                <a href="#about" class="text-gray-900 dark:text-gray-100 hover:text-teal-400 transition duration-300">{{ __('messages.nav.about') }}</a>
+                {{-- <a href="#about" class="text-gray-900 dark:text-gray-100 hover:text-teal-400 transition duration-300">{{ __('messages.nav.about') }}</a>
                 <a href="#projects" class="text-gray-900 dark:text-gray-100 hover:text-teal-400 transition duration-300">{{ __('messages.nav.projects') }}</a>
                 <a href="#skills" class="text-gray-900 dark:text-gray-100 hover:text-teal-400 transition duration-300">{{ __('messages.nav.skills') }}</a>
                 <a href="#contact" class="text-gray-900 dark:text-gray-100 hover:text-teal-400 transition duration-300">{{ __('messages.nav.contact') }}</a>
-                
+                 --}}
+                <a href="#about" class="mx-4 text-gray-900 dark:text-gray-100 hover:text-teal-400 transition duration-300">
+                    {{ __('messages.nav.about') }}
+                </a>
+                <a href="#projects" class="mx-4 text-gray-900 dark:text-gray-100 hover:text-teal-400 transition duration-300">
+                    {{ __('messages.nav.projects') }}
+                </a>
+                <a href="#skills" class="mx-4 text-gray-900 dark:text-gray-100 hover:text-teal-400 transition duration-300">
+                    {{ __('messages.nav.skills') }}
+                </a>
+                <a href="#contact" class="mx-4 text-gray-900 dark:text-gray-100 hover:text-teal-400 transition duration-300">
+                    {{ __('messages.nav.contact') }}
+                </a>
+
+
                 <!-- Theme Toggle Button -->
                 <button id="theme-toggle" class="theme-toggle p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300">
                     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -572,7 +586,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 dark:bg-gray-800 py-6 transition-colors duration-300">
+    {{-- <footer class="bg-gray-100 dark:bg-gray-800 py-6 transition-colors duration-300">
         <div class="container mx-auto px-6 text-center text-gray-700 dark:text-gray-300 transition-colors duration-300">
             <p>&copy; {{ date('Y') }} {{ __('messages.name') }}. All Rights Reserved.</p>
             <div class="flex justify-center space-x-6 mt-4">
@@ -581,7 +595,60 @@
                 <a href="mailto:{{ __('messages.contact.email_address') }}" class="hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">Email</a>
             </div>
         </div>
+    </footer> --}}
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-6 transition-colors duration-300">
+        <div class="container mx-auto px-6 text-center text-gray-700 dark:text-gray-300 transition-colors duration-300">
+            <p class="mb-4">&copy; {{ date('Y') }} {{ __('messages.name') }}. All Rights Reserved.</p>
+
+            <div class="flex justify-center space-x-8 rtl:space-x-reverse">
+                <!-- GitHub -->
+                <a href="{{ __('messages.contact.github') }}" target="_blank" aria-label="GitHub"
+                class="hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.6 1.2 1.6 1.2 1 .1.8 1.7 3.5 1.2.1-.8.4-1.3.7-1.6-2.5-.3-5.2-1.3-5.2-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.4 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.4-1.6 3.4-1.2 3.4-1.2.6 1.6.2 2.8.1 3.1.7.9 1.2 2 1.2 3.3 0 4.6-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6C20.7 21.4 24 17 24 12 24 5.65 18.35.5 12 .5Z"/>
+                    </svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="{{ __('messages.contact.linkedin') }}" target="_blank" aria-label="LinkedIn"
+                class="hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.568c0-1.327-.024-3.037-1.85-3.037-1.853 0-2.136 1.445-2.136 2.939v5.666H9.353V9h3.414v1.561h.049c.476-.9 1.635-1.85 3.367-1.85 3.6 0 4.267 2.368 4.267 5.448v6.293zM5.337 7.433a2.062 2.062 0 110-4.124 2.062 2.062 0 010 4.124zM6.99 20.452H3.683V9H6.99v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.225.792 24 1.771 24h20.451C23.205 24 24 23.225 24 22.271V1.729C24 .774 23.205 0 22.225 0z"/>
+                    </svg>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:{{ __('messages.contact.email_address') }}" aria-label="Email"
+                class="hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+                    </svg>
+                </a>
+
+                <!-- Facebook -->
+                <a href="{{ __('messages.contact.facebook') }}" target="_blank" aria-label="Facebook"
+                class="hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.676V1.325C24 .593 23.407 0 22.675 0z"/>
+                    </svg>
+                </a>
+
+                <!-- Instagram -->
+                <a href="{{ __('messages.contact.instagram') }}" target="_blank" aria-label="Instagram"
+                class="hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.25 1.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </footer>
+
+
 
     <script>
         // Theme toggle functionality

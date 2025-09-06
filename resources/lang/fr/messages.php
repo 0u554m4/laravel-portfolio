@@ -73,8 +73,10 @@ return [
         ],
         'success_message' => 'Votre message a été envoyé avec succès !',
         'social' => 'Retrouvez-moi sur',
-        'email_address' => 'votre-email@example.com',
-        'github' => 'https://github.com/votre-github',
-        'linkedin' => 'https://linkedin.com/in/votre-linkedin',
+        'email_address' => 'oussahmane@gmail.com',
+        'github' => 'https://github.com/0u554m4',
+        'linkedin' => 'https://www.linkedin.com/in/oussama-abderrahmane-873780382/',
+        'facebook' => 'https://www.facebook.com/oussahmane',
+        'instagram' => 'https://www.instagram.com/oussahmane/',
     ],
 ]; 
